@@ -31,3 +31,7 @@ function leerJSON(json){
     document.getElementById("estudiantes").innerHTML=out;
 }
 
+function estudiantes(){
+    leerJSON(estudiantes);
+}
+
