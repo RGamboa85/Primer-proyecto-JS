@@ -1,24 +1,24 @@
 var estudiantes1= [
     {
-        "código":"A101", "nombre":"María del Carmen García", "nota":90
+        "codigo":"A101", "nombre":"María del Carmen García", "nota":90
     },{
-        "código":"A201", "nombre":"Juan José Brenes", "nota":98
+        "codigo":"A201", "nombre":"Juan José Brenes", "nota":98
     },{
-        "código":"A301", "nombre":"Lidia Mendoza", "nota":80
+        "codigo":"A301", "nombre":"Lidia Mendoza", "nota":80
     },{
-        "código":"A401", "nombre":"Santiago Bermudez", "nota":70
+        "codigo":"A401", "nombre":"Santiago Bermudez", "nota":70
     },{
-        "código":"A501", "nombre":"Estefanía Nieto", "nota":96
+        "codigo":"A501", "nombre":"Estefanía Nieto", "nota":96
     },{
-        "código":"A601", "nombre":"Claudia Aguilar", "nota":75
+        "codigo":"A601", "nombre":"Claudia Aguilar", "nota":75
     },{
-        "código":"A701", "nombre":"Milena Torres", "nota":85
+        "codigo":"A701", "nombre":"Milena Torres", "nota":85
     },{
-        "código":"A801", "nombre":"José Szchumacher", "nota":65
+        "codigo":"A801", "nombre":"José Szchumacher", "nota":65
     },{
-        "código":"A901", "nombre":"Esteban Vega", "nota":73
+        "codigo":"A901", "nombre":"Esteban Vega", "nota":73
     },{
-        "código":"A111", "nombre":"Eleonora Martinez", "nota":90
+        "codigo":"A111", "nombre":"Eleonora Martinez", "nota":90
     }
 ]
 
@@ -31,7 +31,19 @@ function leerJSON(json){
     document.getElementById("estudiantes").innerHTML=out;
 }
 
+function sumar(json){
+    var suma=0;
+    for(var i=0;i<json.length;i++){
+        suma+=parseInt(json[i].nota);
+    }
+    document.getElementById("promedio").innerHTML="El promedio de la clase es de: "+suma;
+}
+
 function estudiantes(){
     leerJSON(estudiantes1);
+}
+
+function promedio(){
+    sumar(estudiantes1);
 }
 
