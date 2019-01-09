@@ -36,7 +36,39 @@ function sumar(json){
     for(var i=0;i<json.length;i++){
         suma+=parseInt(json[i].nota);
     }
-    document.getElementById("promedio").innerHTML="El promedio de la clase es de: "+suma;
+    var a=10;
+    var b= suma/a;
+    document.getElementById("promedio").innerHTML="El promedio de la clase es de: "+b;
+}
+
+function calcularPromedioMayor(json){
+    var out = "---------- Mayor promedio de la clase ----------<br>";
+    var promedioMayor = json[0].nota;
+    var pos = 0;
+    var aux = "";
+    for(i=0;i<json.length;i++){
+        if(json[i].nota>=98){
+            promedioMayor = json[i].nota;
+            pos = i;
+            aux = aux + json[pos].nombre + "<br>";
+        }
+    }
+    document.getElementById("mayor").innerHTML = "El estudiante con el mayor promedio de la clase es: "+"<br>"+aux;
+}
+
+function calcularPromedioMenor(json){
+    var out = "---------- Menor promedio de la clase ----------<br>";
+    var promedioMenor = json[0].nota;
+    var pos = 0;
+    var aux = "";
+    for(i=0;i<json.length;i++){
+        if(json[i].nota==65){
+            promedioMenor = json[i].nota;
+            pos = i;
+            aux = aux + json[pos].nombre + "<br>";
+        }
+    }
+    document.getElementById("menor").innerHTML = "El estudiante con el menor promedio de la clase es: "+"<br>"+aux;
 }
 
 function estudiantes(){
@@ -47,3 +79,10 @@ function promedio(){
     sumar(estudiantes1);
 }
 
+function mayor(){
+    calcularPromedioMayor(estudiantes1);
+}
+
+function menor(){
+    calcularPromedioMenor(estudiantes1);
+}
