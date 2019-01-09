@@ -23,7 +23,7 @@ var estudiantes = [
 ]
 
 function leerJSON(json){
-    var out = "*-Estudiantes-*";
+    var out = "----------Estudiantes---------<br>";
     var i;
     for(i=0;i<json.length;i++){
         out+="Código: "+json[i].codigo+" - "+"Nombre: "+json[i].nombre+" - "+"Nota: "+json[i].nota+"<br>";
