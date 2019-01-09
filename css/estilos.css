@@ -1,0 +1,24 @@
+#div{
+    align-content: center;
+    background: #ccd9ff;
+    position: absolute;
+    top:10%;
+    left:40%;
+    width:25%;
+    height:50%;
+    padding: 15px 15px 15px 15px;
+}
+
+#cabecera{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #b3c6ff;
+    padding: 15px 15px 15px 15px;
+    position: absolute;
+    top:5%;
+    left:40%;
+    width:25%;
+    height:50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
