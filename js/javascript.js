@@ -35,4 +35,3 @@ function estudiantes(){
     leerJSON(estudiantes1);
 }
 
-
