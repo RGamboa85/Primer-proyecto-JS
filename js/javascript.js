@@ -31,21 +31,8 @@ function leerJSON(json){
     document.getElementById("estudiantes").innerHTML=out;
 }
 
-function notas1(json){
-    var out = "----------Promedio---------<br>";
-    var notas = json[0].nota;
-    var pos = 0;
-    var aux = "";
-    for(i=0;j<json.length;i++){
-        out+= "Notas: "+json[i].nota+"<br>";
-    }
-    document.getElementById("notas").innerHTML="Los promedios son: "+"<br>"+aux;
-}
-
 function estudiantes(){
     leerJSON(estudiantes1);
 }
-function notas(){
-    notas1(estudiantes1);
-}
+
 
